@@ -8,8 +8,11 @@ gem 'hanami-router', '~> 2.0'
 gem 'hanami-validations', '~> 2.0'
 
 gem 'dry-types', '~> 1.0', '>= 1.6.1'
+gem 'pg'
 gem 'puma'
 gem 'rake'
+gem 'rom', '~> 5.3'
+gem 'rom-sql', '~> 3.6'
 
 group :development, :test do
   gem 'dotenv'
@@ -28,5 +31,6 @@ group :development do
 end
 
 group :test do
+  gem 'database_cleaner-sequel'
   gem 'rack-test'
 end

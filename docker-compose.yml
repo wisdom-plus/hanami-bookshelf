@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: bundle exec hanami server --host=0.0.0.0
+    ports:
+      - 2300:2300
+    volumes:
+      - .:/app:cached
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13.3-alpine
+    volumes:
+      - hanami_data:/var/lib/postgres/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+
+volumes:
+  hanami_data:
