@@ -16,6 +16,6 @@ Hanami.app.register_provider :persistence, namespace: true do
       namespace: 'Bookshelf::Persistence'
     )
 
-    register 'rom', Rom.container(config)
+    register 'rom', ROM.container(config)
   end
 end
