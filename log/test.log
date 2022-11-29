@@ -2848,3 +2848,7 @@ Did you mean?  errors (NoMethodError)
   {:id=>"1"}
 [bookshelf] [INFO] [2022-11-28 15:26:34 +0000] GET 200 2ms 127.0.0.1 /books/1 -
   {:id=>"1"}
+[bookshelf] [INFO] [2022-11-29 13:31:42 +0000] POST 201 71ms 127.0.0.1 /books -
+  {:book=>{:title=>"Practical Object-Oriented Design in Ruby", :author=>"Sandi Metz"}}
+[bookshelf] [INFO] [2022-11-29 13:31:42 +0000] POST 422 13ms 127.0.0.1 /books -
+  {:book=>{:title=>nil}}
